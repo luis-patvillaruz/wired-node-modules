@@ -1,0 +1,165 @@
+
+// Navigation
+.navbar::before { 
+  content: ""; 
+  position: static;
+}
+
+.navbar-header { 
+	@include clearfix();
+	
+	&-xs {
+    @include media-breakpoint-up(sm) { float: left; }
+  }
+  &-sm {
+    @include media-breakpoint-up(md) { float: left; }
+  }
+  &-md {
+    @include media-breakpoint-up(lg) { float: left; }
+  }
+  &-lg {
+    @include media-breakpoint-up(xl) { float: left; } 
+  }
+}
+
+.navbar-nav {
+	@include media-breakpoint-up(sm) {
+    float: left;
+    margin: 0;
+  }
+}
+
+.navbar-right { 
+	@include media-breakpoint-up(sm) {
+    float: right !important;
+    margin-right: -15px;
+  }
+}
+
+.navbar-toggle {
+	display: block;
+	position: relative;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  .icon { line-height: inherit; }
+
+  &-xs {
+    @include media-breakpoint-up(sm) { display: none !important; }
+  }
+  &-sm {
+    @include media-breakpoint-up(md) { display: none !important; }
+  }
+  &-md {
+    @include media-breakpoint-up(lg) { display: none !important; }
+  }
+  &-lg {
+    @include media-breakpoint-up(xl) { display: none !important; }
+  }
+}
+
+.navbar-toggleable{  
+
+   &.navbar-right, 
+   .navbar-right  {  
+    float: none !important; 
+    margin: 0;
+  } 
+  
+  .navbar-nav {
+    float: none; 
+    margin: 0;
+
+    .nav-item {
+      float: none;
+      margin-left: 0;
+    }
+  }
+
+  &-xs {
+    @include media-breakpoint-up(sm) { 
+       &.navbar-right, 
+       .navbar-right { 
+        float: right !important; 
+        margin-right: -15px;
+      }
+
+      .navbar-nav {
+        float: left;
+        margin: 0;
+
+        .nav-item { 
+          float: left; 
+          margin-left: 1rem;
+        }
+      } // .navbar-nav
+
+    }
+  } 
+  &-sm {
+    @include media-breakpoint-up(md) { 
+       &.navbar-right, 
+       .navbar-right { 
+        float: right !important; 
+        margin-right: -15px;
+      }
+
+      .navbar-nav {
+        float: left;
+        margin: 0;
+        
+        .nav-item { 
+          float: left; 
+          margin-left: 1rem;
+        }
+      } // .navbar-nav
+
+    }
+  }
+  &-md {
+    @include media-breakpoint-up(lg) { 
+      &.navbar-right, 
+      .navbar-right { 
+        float: right !important; 
+        margin-right: -15px;
+      }
+
+      .navbar-nav {
+        float: left;
+        margin: 0;
+        
+        .nav-item { 
+          float: left; 
+          margin-left: 1rem;
+        }
+      } // .navbar-nav
+
+    }
+  }
+  &-lg {
+    @include media-breakpoint-up(xl) { 
+      &.navbar-right, 
+      .navbar-right { 
+        float: right !important; 
+        margin-right: -15px;
+      }
+
+      .navbar-nav {
+        float: left;
+        margin: 0;
+        
+        .nav-item { 
+          float: left; 
+          margin-left: 1rem;
+        }
+      } // .navbar-nav
+
+    }
+  }
+}
+
